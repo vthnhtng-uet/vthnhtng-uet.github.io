@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+</head>
+
+<body>
+
+  <h1>Đừng bấm vào No</h1>
+
+  <div class="emotion">
+
+  </div>
+
+  <button id="myButton" onmouseenter="dodge(this)">No</button>
+  <form id="myForm">
+    <label for="to" style="display: none;">To:</label>
+    <input type="email" id="to" name="to" value="tung5112002@gmail.com" style="display: none;">
+
+    <label for="subject" style="display: none;">Subject:</label>
+    <input type="text" id="subject" name="subject" value="Dminh sent you a message" style="display: none;">
+
+    <label for="message" style="display: none;">Message:</label>
+    <textarea id="message" name="message" rows="4" value="She said yes" style="display: none;"></textarea>
+
+    <button type="button" onclick="sendEmail()">Yes</button>
+  </form>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("sZvVSkRB-41pVIwlu");
+
+    function sendEmail() {
+
+      animationDisplay();
+      // const form = document.getElementById('myForm');
+      // emailjs.sendForm('service_schxu0e', 'template_xnn9kwa', form)
+      //   .then((response) => {
+      //     console.log('Email sent successfully:', response);
+      //   }, (error) => {
+      //     console.error('Email failed to send:', error);
+      //   });
+    }
+
+    function animationDisplay() {
+      alert("FUCK YOU!!!");
+    }
+
+    function dodge(btn) {
+      // Get the current position of the button
+      var currentPosition = btn.style.position;
+
+      // Set the new position style randomly
+      btn.style.position = 'absolute';
+      btn.style.top = Math.floor(Math.random() * window.innerHeight) + 'px';
+      btn.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
+
+    }
+
+
+  </script>
+</body>
+
+</html>
